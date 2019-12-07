@@ -3,9 +3,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import blogStyles from "./blog.module.scss"
-import Head from '../components/head'
+import Head from "../components/head"
 
-//Contentful Implementation
+// Contentful Implementation
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -18,7 +18,9 @@ const BlogPage = () => {
           }
         }
       }
-      allMarkdownRemark(sort: { fields: frontmatter___publishedDate, order: DESC }) {
+      allMarkdownRemark(
+        sort: { fields: frontmatter___publishedDate, order: DESC }
+      ) {
         edges {
           node {
             frontmatter {
@@ -36,7 +38,7 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <Head title="Blog"/>
+      <Head title="Blog" />
       <h1>Blog</h1>
       <ol className={blogStyles.posts}>
         {data.allContentfulBlogPost.edges.map(edge => {
