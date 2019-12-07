@@ -1,3 +1,8 @@
+---
+title: "Gatsby Cheat Sheet"
+publishedDate: "2019-12-06"
+---
+
 ### How to link between Gatsby pages:
 
 **Intro:** This link is only used to link between internal pages in Gatsby. It prevents the "flashing" that you get due to a refresh. With the following method, Gatsby preloads the pages that have the <Link> element.
