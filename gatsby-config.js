@@ -11,6 +11,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`en`, `de`],
+        defaultLangauage: `en`,
+        redirect: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-eslint",
       options: {
         exclude: /(node_modules|.cashe|public)/,

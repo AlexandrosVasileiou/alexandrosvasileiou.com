@@ -1,9 +1,12 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import { useIntl, Link } from "gatsby-plugin-intl"
 
+import Language from "./language"
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -29,7 +32,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/"
             >
-              Home
+              {intl.formatMessage({ id: "home" })}
             </Link>
           </li>
           <li>
@@ -59,6 +62,7 @@ const Header = () => {
               About
             </Link>
           </li>
+          <Language />
         </ul>
       </nav>
     </header>
