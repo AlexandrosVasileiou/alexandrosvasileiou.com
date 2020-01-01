@@ -12,9 +12,7 @@ const NotFound = () => {
       <p>
         <Link to="/">Head home</Link>
       </p>
-      <p>
-          If you think this page should exist, please contact me!
-      </p>
+      <p>If you think this page should exist, please contact me!</p>
     </Layout>
   )
 }
