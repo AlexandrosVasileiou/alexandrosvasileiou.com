@@ -46,18 +46,21 @@ export default Footer
 ```
 
 Make sure you export it by:
+
 ```js
 export default Component_name
 ```
 
 **Step 4:**
 Go to the page you want to import your component at and import it by:
-```js 
-import Footer from '../components/'
+
+```js
+import Footer from "../components/"
 ```
 
 **Step 5:**
 Render your component anywhere you need it in the page where you imported it:
+
 ```js
 const IndexPage = () => {
   return (
@@ -83,11 +86,7 @@ Create a functional react component with `props` as the argument and export it:
 import React from "react"
 
 const Layout = props => {
-  return (
-    <div>
-      {props.children}
-    </div>
-  )
+  return <div>{props.children}</div>
 }
 
 export default Layout
@@ -122,18 +121,19 @@ Import the Layout component in any page that you want to use it. In the `return`
 
 ```js
 import React from "react"
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
     <Layout>
-    <h1>This is the Home Page body</h1>
+      <h1>This is the Home Page body</h1>
     </Layout>
   )
 }
 
 export default IndexPage
 ```
+
 ### How to start with Styling
 
 **Intro:**
@@ -147,9 +147,11 @@ Create a `.css` or `.scss` file in that folder (for example `index.css`) and wri
 
 **Step 3:**
 Import the css file to the files you want to affect by including the following in the beginning of the file:
+
 ```js
-import '../styles/index.css'
+import "../styles/index.css"
 ```
+
 ### How to install and configure plugins
 
 **Intro:**
@@ -164,22 +166,24 @@ Run `npm install {plugin_name_according_to_gatbsy_site} {may_require_more_npm_mo
 **Step 3:**
 Create `gatsby-config.js` file in the root folder of the project (if it doesn't exist).
 Configure the plugins array to include the newly installed plugin. For example:
+
 ```js
 module.exports = {
-  plugins: [
-    'gatsby-plugin-sass'
-  ]
+  plugins: ["gatsby-plugin-sass"],
 }
 ```
+
 ### How to install and configure AirBnB ESlint and Prettier in Gatsby Website
 
 **Intro:**
 Best if used with a very pure gatsby template, without any configuration
 
 **Step 1:**
+
 - Install the `gatsby-plugin-eslint` by using the command:
-`npm install --save-dev gatsby-plugin-eslint`
+  `npm install --save-dev gatsby-plugin-eslint`
 - Configure the plugin by adding the following in the `gatsby-config.js` file:
+
 ```js
 module.exports = {
   plugins: [
@@ -197,12 +201,15 @@ module.exports = {
   ],
 }
 ```
+
 **Step 2:**
 Install the following npm modules:
 `npm install --save-dev eslint eslint-config-airbnb eslint-config-prettier eslint-loader eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react prettier`
 
 **Step 3:**
+
 - Create a `.eslintrc.json` file in the root folder of the project and add the following:
+
 ```js
 {
     "root": true,
@@ -247,12 +254,14 @@ Install the following npm modules:
     }
 }
 ```
+
 - Create a `.eslintignore` file in the project root folder and add the following:
 
 ```js
 /node_modules/**
 /public/**
 ```
+
 - Create a `.prettierrc` file in the project root folder (if there is not already one) and add the following:
 
 ```js
@@ -264,6 +273,7 @@ Install the following npm modules:
   "trailingComma": "es5"
 }
 ```
+
 - Create a `.prettierignore` file in the project root folder (if there is not already one) and add the following:
 
 ```
@@ -272,6 +282,7 @@ package.json
 package-lock.json
 public
 ```
+
 **Step 4:**
 Install the ESlint and Prettier plugins for VS Code and leave the default configurations. Then create a `.editorconfig` file in the project root folder and add the following:
 
@@ -289,6 +300,7 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 ```
+
 **Step 5:**
 Run your project and add rules to the errors or warnings you want to ignore
 
