@@ -10,6 +10,7 @@ module.exports = {
     author: "Alexandros Vasileiou",
   },
   plugins: [
+    "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-plugin-eslint",
       options: {

@@ -1,4 +1,6 @@
+/* eslint-disable react/jsx-curly-newline */
 import React, { useState } from "react"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 // import { Link, graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
@@ -22,11 +24,11 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      {/* <h1> */}
-      {/*   <Link className={headerStyles.title} to="/"> */}
-      {/*     {data.site.siteMetadata.title} */}
-      {/*   </Link> */}
-      {/* </h1> */}
+      {/* <h1>
+        <Link className={headerStyles.title} to="/">
+          {data.site.siteMetadata.title}
+        </Link>
+      </h1> */}
       {/* Vim Navbar */}
       <nav className={headerStyles.vimNavbar}>
         <ul>
@@ -88,9 +90,21 @@ const Header = () => {
         </ul>
       </nav>
       <nav className={headerStyles.colorMode}>
-        <ul>
+        <ul className={headerStyles.colorMode}>
           <li>
-            <Link to="/">☀Light Mode</Link>
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <button
+                  type="button"
+                  onClick={() => {
+                    toggleTheme(theme === "light" ? "dark" : "light")
+                  }}
+                >
+                  {theme === "light" ? "dark theme" : "light theme"}
+                  {/* {theme === "light" ? "🌙" : "☀"} */}
+                </button>
+              )}
+            </ThemeToggler>
           </li>
         </ul>
       </nav>
