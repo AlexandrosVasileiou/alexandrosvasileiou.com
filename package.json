@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "env-cmd -f .env gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
@@ -14,7 +14,9 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/fira-mono": "^4.5.0",
     "gatsby": "^2.21.9",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-sharp": "^2.6.0",
