@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #665c54;
+  background-color: var(--bg3);
   height: 40px;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .vim-navbar {
-  ul {
+  ul{
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -27,7 +27,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 40px;
-    color: #282828;
+    color: var(--bg);
     text-decoration: none;
   }
   a::after {
@@ -45,62 +45,62 @@
 
   ul > li {
     order: 0;
-    background-color: #504945;
+    background-color: var(--bg2);
     a {
-      color: #a89984;
+      color: var(--gray);
     }
     :after {
-      border-left: 20px solid #504945;
+      border-left: 20px solid var(--bg2);
     }
   }
 
   ul > li:nth-child(odd) {
-    background-color: #7c6f64;
+    background-color: var(--bg4);
     a {
-      color: #32302f;
+      color: var(--bg0_s);
     }
     :after {
-      border-left: 20px solid #7c6f64;
+      border-left: 20px solid var(--bg4);
     }
   }
 
   ul > li.vim-active-item {
     order: 1;
-    background-color: #fe8019;
+    background-color: var(--orange-alt);
     a {
-      color: #282828;
+      color: var(--bg);
     }
     :after {
-      border-left: 20px solid #fe8019;
+      border-left: 20px solid var(--orange-alt);
     }
   }
 
   ul > li.vim-active-item ~ li {
-    background-color: #7c6f64;
+    background-color: var(--bg4);
     a {
-      color: #32302f;
+      color: var(--bg0_s);
     }
     :after {
-      border-left: 20px solid #7c6f64;
+      border-left: 20px solid var(--bg4);
     }
   }
 
   ul > li.vim-active-item ~ li:nth-child(odd) {
-    background-color: #504945;
+    background-color: var(--bg2);
     a {
-      color: #a89984;
+      color: var(--gray);
     }
     :after {
-      border-left: 20px solid #504945;
+      border-left: 20px solid var(--bg2);
     }
   }
   ul > li:first-child {
-    background-color: #fe8019;
+    background-color: var(--orange-alt);
     a {
       padding-left: 10px;
     }
     :after {
-      border-left: 20px solid #fe8019;
+      border-left: 20px solid var(--orange-alt);
     }
   }
 }
@@ -111,7 +111,7 @@
     list-style-type: none;
     margin: 0;
   }
-  a {
+  button {
     position: relative;
     display: inline-flex;
     height: 40px;
@@ -121,11 +121,13 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 40px;
-    background-color: #A89985;
-    color: #282828;
+    background-color: var(--gray);
+    color: var(--bg);
     text-decoration: none;
+    border: none;
+    outline: none;
   }
-  a::before {
+  button::before {
     position: absolute;
     content: "";
     width: 0px;
@@ -134,7 +136,7 @@
     border-left: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-top: 20px solid transparent;
-    border-right: 20px solid #A89985;
+    border-right: 20px solid var(--gray);
     z-index: 1;
   }
 }

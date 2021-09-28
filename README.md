@@ -3,12 +3,12 @@
 This website is designed and built from the ground up by me (Alexandros Vasileiou) and serves three main purposes:
 
 1. As a way to learn web development and stay in touch with web development almost daily
-2. As a way to keep notes (blog) on things that I learn in a daily purpose
+2. As a way to keep notes (blog) on things that I learn
 3. As a means to share experiences with the world
 
 ## Current Status:
 
-The website is heavily under construction. I have already created the design of the home page (in Figma) but the current code in the webiste is just a template Gatsby website.
+The website is under construction. I have already created the design of the home page (in Figma) but the current code in the webiste is just a Gatsby website template.
 
 ## Todo:
 

@@ -1,3 +1,115 @@
 .footer {
-    margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg3);
+  height: 40px;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  li {
+      margin: 0;
+  }
+  span,
+  a {
+    position: relative;
+    display: inline-flex;
+    height: 40px;
+    padding: 0 10px 0 30px;
+    font-family: Fira Mono;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--bg);
+    text-decoration: none;
+  }
+  span::after,
+  a::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    right: -40px;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    z-index: 1;
+  }
+}
+.work-links {
+  ul > li:nth-child(odd) {
+    background-color: var(--bg4);
+    a {
+      color: var(--bg0_s);
+    }
+    :after {
+      border-left: 20px solid var(--bg4);
+    }
+  }
+  ul > li:nth-child(even) {
+    background-color: var(--bg2);
+    a {
+      color: var(--gray);
+    }
+    :after {
+      border-left: 20px solid var(--bg2);
+    }
+  }
+  ul > li:first-child {
+    background-color: var(--gray);
+    span {
+      color: var(--bg);
+      padding-left: 10px;
+    }
+    span:after {
+      border-left: 20px solid var(--gray);
+    }
+  }
+}
+.social-links {
+  a,
+  span {
+    padding: 0 30px 0 10px;
+  }
+  ul > li:nth-child(odd) {
+    background-color: var(--bg4);
+    a {
+      color: var(--bg0_s);
+    }
+    :after {
+      border-right: 20px solid var(--bg4);
+      left: -40px;
+    }
+  }
+  ul > li:nth-child(even) {
+    background-color: var(--bg2);
+    a {
+      color: var(--gray);
+    }
+    :after {
+      border-right: 20px solid var(--bg2);
+      left: -40px;
+    }
+  }
+  ul > li:last-child {
+    background-color: var(--gray);
+    span {
+      color: var(--bg);
+      padding-right: 10px;
+    }
+    span:after {
+      border-right: 20px solid var(--gray);
+      left: -40px;
+    }
+  }
+}
+
+.copyright {
+    color: var(--blue-alt);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
 }
